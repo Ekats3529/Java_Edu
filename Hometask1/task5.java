@@ -20,6 +20,10 @@ public class Main {
             for (int i = 1; i < sb.length(); i += 2) {
                 tmp.append((Character.getNumericValue(sb.charAt(i)) +  Character.getNumericValue(sb.charAt(i - 1))));
             }
+            if (sb.length() % 2 == 1){
+                tmp.append(sb.charAt(sb.length() - 1));
+            }
+            
             System.out.print(tmp + " -> ");
             sb = tmp;
         }
@@ -32,5 +36,6 @@ public class Main {
         System.out.println(isPalindromeDescendant(23336014));
         System.out.println(isPalindromeDescendant(11));
         System.out.println(isPalindromeDescendant(1111112));
+        System.out.println(isPalindromeDescendant(11112));
     }
 }
